@@ -5,9 +5,8 @@ def palindrom_test(ward):
        wyrazy mogą być pisane z duej lub małej litery
        funkcja zwraca wartość boolean: True/False
     """
-    ward_revers = ''
-    for i in range(1,len(ward)+1):
-        ward_revers += ward[-i]
-    print(ward_revers.lower() == ward.lower())
+    ward_revers = ward[len(ward)::-1]
     return ward_revers.lower() == ward.lower()
-palindrom_test('Witek')
+
+print("Słowo %s jest palindromem: %s" %('Witek',palindrom_test('Witek')))
+print("Słowo %s jest palindromem: %s" %('Potop',palindrom_test('Potop')))
